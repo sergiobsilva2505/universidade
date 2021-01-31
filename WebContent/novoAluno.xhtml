@@ -5,6 +5,20 @@
 
 <h:body>
 	<h1>Novo aluno</h1>
+	<h:form>
+		<fieldset>
+			<legend>Dados do aluno</legend>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Id: " for="id" />
+				<h:inputText id="id" value="#{alunoBean.aluno.id}" />
+				<h:outputLabel value="Nome: " for="nome" />
+				<h:inputText id="nome" value="#{alunoBean.aluno.nome}" />
+				<h:outputLabel value="CPF: " for="cpf" />
+				<h:inputText id="cpf" value="#{alunoBean.aluno.cpf}" />
+				<h:commandButton value="Gravar" action="#{alunoBean.gravar}" />
+			</h:panelGrid>
+		</fieldset>
+	</h:form>
 
 </h:body>
 </html>
